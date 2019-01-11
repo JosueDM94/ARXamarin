@@ -77,21 +77,15 @@
     <Folder Include="Views\Main\" />
     <Folder Include="libs\" />
     <Folder Include="libs\armeabi-v7a\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UnityPlayer.Droid\UnityPlayer.Droid.csproj">
-      <Project>{AF4CB5B7-4668-4245-A8F1-33A2508D78F6}</Project>
-      <Name>Unity3d.Player.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UnityPlayer.Droid\Unity3d.Ads.Droid\Unity3d.Ads.Droid.csproj">
-      <Project>{B428D58D-70DE-44C6-8F73-E4CE72255BAA}</Project>
-      <Name>Unity3d.Ads.Droid</Name>
-    </ProjectReference>
+    <Folder Include="libs\x86\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidNativeLibrary Include="libs\armeabi-v7a\libmain.so" />
     <AndroidNativeLibrary Include="libs\armeabi-v7a\libmonobdwgc-2.0.so" />
     <AndroidNativeLibrary Include="libs\armeabi-v7a\libunity.so" />
+    <AndroidNativeLibrary Include="libs\x86\libmain.so" />
+    <AndroidNativeLibrary Include="libs\x86\libmonobdwgc-2.0.so" />
+    <AndroidNativeLibrary Include="libs\x86\libunity.so" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\bin\Data\boot.config" />
@@ -101,7 +95,6 @@
     <AndroidAsset Include="Assets\bin\Data\sharedassets0.assets" />
     <AndroidAsset Include="Assets\bin\Data\unity default resources" />
     <AndroidAsset Include="Assets\bin\Data\Managed\Assembly-CSharp.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\Assembly-CSharp.pdb" />
     <AndroidAsset Include="Assets\bin\Data\Managed\Mono.Security.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\System.ComponentModel.Composition.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\System.Configuration.dll" />
@@ -123,15 +116,9 @@
     <AndroidAsset Include="Assets\bin\Data\Managed\System.Xml.XPath.XDocument.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\System.Xml.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\System.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\Unity.Analytics.DataPrivacy.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\Unity.Analytics.DataPrivacy.pdb" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\Unity.TextMeshPro.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\Unity.TextMeshPro.pdb" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.AIModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.ARModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.AccessibilityModule.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.Advertisements.Android.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.Advertisements.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.AnimationModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.AssetBundleModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.AudioModule.dll" />
@@ -150,7 +137,6 @@
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.JSONSerializeModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.LocalizationModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.Networking.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.Networking.dll.mdb" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.ParticleSystemModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.PerformanceReportingModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.Physics2DModule.dll" />
@@ -159,7 +145,6 @@
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.ScreenCaptureModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.SharedInternalsModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.SpatialTracking.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.SpatialTracking.dll.mdb" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.SpatialTrackingModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.SpriteMaskModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.SpriteShapeModule.dll" />
@@ -173,10 +158,8 @@
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.TextRenderingModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.TilemapModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.Timeline.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.Timeline.dll.mdb" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.TimelineModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.UI.dll" />
-    <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.UI.dll.mdb" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.UIElementsModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.UIModule.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\UnityEngine.UNETModule.dll" />
@@ -199,6 +182,12 @@
     <AndroidAsset Include="Assets\bin\Data\Managed\mscorlib.dll" />
     <AndroidAsset Include="Assets\bin\Data\Managed\netstandard.dll" />
     <AndroidAsset Include="Assets\bin\Data\Resources\unity_builtin_extra" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Unity3d.Player.Droid\Unity3d.Player.Droid.csproj">
+      <Project>{AF4CB5B7-4668-4245-A8F1-33A2508D78F6}</Project>
+      <Name>Unity3d.Player.Droid</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

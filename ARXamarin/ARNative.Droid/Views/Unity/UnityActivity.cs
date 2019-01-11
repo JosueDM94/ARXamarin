@@ -17,23 +17,26 @@ namespace ARNative.Droid
     {
         protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
-        protected override async void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             try
-            {
-
-
+            {            
                 RequestWindowFeature(Android.Views.WindowFeatures.NoTitle);
                 base.OnCreate(savedInstanceState);
                 mUnityPlayer = new UnityPlayer(this);
                 SetContentView(mUnityPlayer);
                 mUnityPlayer.RequestFocus();
-                await Task.Delay(5000);
+                Timer();
             }
             catch(Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public async void Timer()
+        {
+
         }
 
         protected override void OnNewIntent(Intent intent)
