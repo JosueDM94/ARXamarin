@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <!-- Normalize the namespace for .NET -->    
+    <attr path="/api/package[@name='com.unity3d.ads']" name="managedName">Unity3d.Ads</attr>
+    <attr path="/api/package[@name='com.unity3d.ads.request']" name="managedName">Unity3d.Ads.Request</attr>
+    
+    <!-- Error CS0102: The type 'FailedEventArgs' already contains a definition for 'p0'-->
+    <attr path="/api/package[@name='com.unity3d.ads.request']/interface[@name='IWebRequestListener']/method[@name='onComplete']/parameter[1]" name="managedName">url</attr>
+    <attr path="/api/package[@name='com.unity3d.ads.request']/interface[@name='IWebRequestListener']/method[@name='onComplete']/parameter[2]" name="managedName">response</attr>
+    <attr path="/api/package[@name='com.unity3d.ads.request']/interface[@name='IWebRequestListener']/method[@name='onComplete']/parameter[3]" name="managedName">responseCode</attr>
+    <attr path="/api/package[@name='com.unity3d.ads.request']/interface[@name='IWebRequestListener']/method[@name='onComplete']/parameter[4]" name="managedName">headers</attr>
+    
+    <attr path="/api/package[@name='com.unity3d.ads.request']/interface[@name='IWebRequestListener']/method[@name='onFailed']/parameter[1]" name="managedName">url</attr>
+    <attr path="/api/package[@name='com.unity3d.ads.request']/interface[@name='IWebRequestListener']/method[@name='onFailed']/parameter[2]" name="managedName">error</attr>
+</metadata>
